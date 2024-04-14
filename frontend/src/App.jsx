@@ -7,7 +7,7 @@ function App() {
   const [count, setCount] = useState(0)
   function getHello() {
     const greet = document.getElementById('greet')
-    fetch('http://localhost:4000/api/hello')
+    fetch(import.meta.env.VITE_API_SERVER + '/api/hello')
       .then(response => response.text())
       .then(data => greet.innerHTML = data)
   }
